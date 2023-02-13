@@ -1,5 +1,7 @@
+% This is version 1.0
+%
 % This style file is licensed under the MIT License
-% Copyright (c) 2023 NISHIHAMA Daisuke
+% Copyright (c) 2023 NISHIHAMA Daisuke or AKatoki Saidai
 %
 % Permission is hereby granted, free of charge, to any person obtaining a
 % copy of this software and associated documentation files (the "Software"),
@@ -22,6 +24,7 @@
 \mode<presentation>
 
 \usepackage{tikz}
+\usepackage{pxjahyper}
 
 \usetheme{Madrid}
 \useinnertheme{circles}
@@ -35,7 +38,6 @@
 \definecolor{cutegreen}{HTML}{66ACA9}
 \definecolor{cuteblue}{HTML}{6BA7FF}
 \definecolor{cutered}{HTML}{D69EF5}
-% \logo{\includegraphics[height=1.3cm]{akatoki_logo.png}}
 \setbeamercolor{structure}{fg=myprimarycolor}
 \setbeamercolor{frametitle}{bg=myprimarycolor}
 \setbeamercolor{frametitle}{fg=mysecondarycolor}
@@ -43,9 +45,6 @@
 
 % Blockの設定
 \setbeamertemplate{blocks}[rounded]
-% \setbeamercolor{block title}{bg=blue!60!black}
-% \setbeamercolor{block title alerted}{bg=red!60!black}
-% \setbeamercolor{block title example}{bg=green!40!black}
 \setbeamercolor{block title}{bg=cuteblue}
 \setbeamercolor{block title alerted}{bg=cutered}
 \setbeamercolor{block title example}{bg=cutegreen}
@@ -69,7 +68,7 @@
   \vskip0pt%
 }
 
-% headの設定
+% headerの設定
 \addtobeamertemplate{frametitle}{}{%
 \begin{tikzpicture}[remember picture,overlay]
 \node at([shift={(0.44\paperwidth,-0.8)}]current page.north) {\includegraphics[height=1.4cm]{logo}};
