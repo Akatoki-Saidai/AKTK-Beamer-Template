@@ -1,0 +1,79 @@
+% This style file is licensed under the MIT License
+% Copyright (c) 2023 NISHIHAMA Daisuke
+%
+% Permission is hereby granted, free of charge, to any person obtaining a
+% copy of this software and associated documentation files (the "Software"),
+% to deal in the Software without restriction, including without limitation
+% the rights to use, copy, modify, merge, publish, distribute, sublicense,
+% and/or sell copies of the Software, and to permit persons to whom the
+% Software is furnished to do so, subject to the following conditions:
+%
+% The above copyright notice and this permission notice shall be included in
+% all copies or substantial portions of the Software.
+%
+% THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+% IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+% FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL
+% THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+% LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING
+% FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER
+% DEALINGS IN THE SOFTWARE.
+
+\mode<presentation>
+
+\usepackage{tikz}
+
+\usetheme{Madrid}
+\useinnertheme{circles}
+\useoutertheme{infolines}
+
+\renewcommand{\today}{\number\year 年\number\month 月\number\day 日}
+\renewcommand{\kanjifamilydefault}{\gtdefault}
+
+\definecolor{myprimarycolor}{HTML}{d50b41}
+\definecolor{mysecondarycolor}{HTML}{FFFFFF}
+\definecolor{cutegreen}{HTML}{66ACA9}
+\definecolor{cuteblue}{HTML}{6BA7FF}
+\definecolor{cutered}{HTML}{D69EF5}
+% \logo{\includegraphics[height=1.3cm]{akatoki_logo.png}}
+\setbeamercolor{structure}{fg=myprimarycolor}
+\setbeamercolor{frametitle}{bg=myprimarycolor}
+\setbeamercolor{frametitle}{fg=mysecondarycolor}
+
+
+% Blockの設定
+\setbeamertemplate{blocks}[rounded]
+% \setbeamercolor{block title}{bg=blue!60!black}
+% \setbeamercolor{block title alerted}{bg=red!60!black}
+% \setbeamercolor{block title example}{bg=green!40!black}
+\setbeamercolor{block title}{bg=cuteblue}
+\setbeamercolor{block title alerted}{bg=cutered}
+\setbeamercolor{block title example}{bg=cutegreen}
+
+% footerの設定
+\setbeamertemplate{navigation symbols}{}
+\setbeamerfont{footline}{size=\fontsize{7}{11}\selectfont}
+\setbeamertemplate{footline}{
+	\leavevmode%
+  \hbox{%
+  \begin{beamercolorbox}[wd=.3\paperwidth,ht=3ex,dp=1ex,center]{author in head/foot}%
+    \usebeamerfont{author in head/foot}\insertshortauthor\expandafter\beamer@ifempty\expandafter{\beamer@shortinstitute}{}{~~(\insertshortinstitute)}
+  \end{beamercolorbox}%
+  \begin{beamercolorbox}[wd=.4\paperwidth,ht=3ex,dp=1ex,center]{title in head/foot}%
+    \usebeamerfont{title in head/foot}\insertshorttitle
+  \end{beamercolorbox}%
+  \begin{beamercolorbox}[wd=.3\paperwidth,ht=3ex,dp=1ex,right]{date in head/foot}%
+    \usebeamerfont{date in head/foot}\insertshortdate{}\hspace*{2em}
+\insertframenumber{} / \inserttotalframenumber\hspace*{2ex} 
+  \end{beamercolorbox}}%
+  \vskip0pt%
+}
+
+% headの設定
+\addtobeamertemplate{frametitle}{}{%
+\begin{tikzpicture}[remember picture,overlay]
+\node at([shift={(0.44\paperwidth,-0.8)}]current page.north) {\includegraphics[height=1.4cm]{logo}};
+\end{tikzpicture}}
+
+\mode
+<all>
